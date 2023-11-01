@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>What is in the Neural Network? Dissecting DNNs with CLIP-Dissect</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+  
+<body>
+  <header>
+    <h1>What is in a Neural Network? </h1>
+    <h1>Dissecting DNNs with CLIP-Dissect</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-to-use.html">How To Use</a></li>
+
+        <li><a href="https://dr4nx.github.io/neuron-analysis-project/">Blog Post</a></li>
+        <li><a href="https://dr4nx.github.io/neuron-analysis-project/about/">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div style="text-align: center;">
+    <h4>Model: ResNet 50 trained on ImageNet; Dprobe: Broden; Concept Set: top-20k English Words; Similarity Function: Soft-WPMI</h4>
+    <h4>We are dissecting layers with the star symbol ✦</h4>
+  </div>
+  <div class="image-container">
+    <img style="max-width: 100%;" src="assets/FifthRedraw.png" alt="ResNet-50 Architecture">
+  </div>
+  <div id="sides">
+  <div id="left">
+  <div>
+    <input type="radio" id="searchByNumber" name="searchType" value="number" checked>
+    <label for="searchByNumber">Search by Neuron ID:</label>
+    <input type="number" id="neuronNumber">
+    <select id="layer">
+      <option value="1">Layer 1</option>
+      <option value="2">Layer 2</option>
+      <option value="3">Layer 3</option>
+      <option value="4">Layer 4</option>
+    </select>
+    <hr>
+    <label>Top-K Concepts (up to 10):</label>
+    <input type="number" id="topk" value="10">
+  </div>
+  </div>
+  <div id="right">
+  <div>
+    <input type="radio" id="searchByConcept" name="searchType" value="concept">
+    <label for="searchByConcept">Search by Concept:</label>
+    <input type="text" id="conceptInput">
+  </div>
+  <div>
+    <input type="checkbox" name="layer" value="1" checked> Layer 1
+    <input type="checkbox" name="layer" value="2" checked> Layer 2
+    <input type="checkbox" name="layer" value="3" checked> Layer 3
+    <input type="checkbox" name="layer" value="4" checked> Layer 4
+  </div>
+  </div>
+  </div>
+  <div id="buttonHolder">
+    <button id="searchButton2">Search</button>
+  </div>
+  <hr>
+  <div>
+    <button id="previousButton" style="visibility: hidden; display: inline-block;">Previous Neuron</button>
+    <button id="nextButton" style="visibility: hidden; display: inline-block; float: right;">Next Neuron</button>
+  </div>
+  <div id="searchResults"></div>
+  <div id="imageContainer"></div>
+  <div id="historyContainer"><h3>Searched Neuron IDs History</h3><table><tr><th>Neuron ID</th><th>Layer</th><th>Top Dissected Concept</th><th>Top Concept Similarity</th></tr></table></div>
+  <div id="conceptHistory"><h3>Searched Concepts History</h3><table><tr><th>Concept</th><th>Neurons Found</th><th>Layers</th><th>Top Matching Neuron ID</th><th>Top Matching Neuron Similarity</th></tr></table></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

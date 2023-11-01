@@ -1,0 +1,239 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 2px;
+  text-align: center;
+  /* Center-align the content */
+
+}
+.neuronTable {
+  table-layout: fixed;
+}
+
+.neuronTable td {
+  width: 20px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: center;
+}
+
+table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+input[type="radio"] {
+  vertical-align: middle;
+  /* Aligns the radio button with the label */
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+a { color:blue } /* Globally */
+
+/* Each state */
+a:visited { text-decoration: none; color:black; }
+a:hover { text-decoration: none; color:black; }
+a:hover, a:active { text-decoration: none; color:red }
+
+label {
+  display: inline-block;
+  /* Ensures the label and radio button are inline */
+  vertical-align: middle;
+  /* Aligns the label with the radio button */
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+  padding: 5px;
+  margin: 1%;
+  border: 1px solid #000;
+  border-radius: 4px;
+  width: 98%;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#searchButton2 {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#buttonHolder {
+  text-align: center;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+header {
+  background-color: #d9ead3ff;
+  color: #000;
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+header h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  /* Add smooth color transition on hover */
+}
+
+nav a:hover {
+  color: #fff;
+  /* Change color on hover */
+}
+
+hr {
+  border: none;
+  /* Remove default border */
+  height: 2px;
+  /* Set the height of the <hr> */
+  background-color: #ccc;
+  /* Color of the <hr> */
+  margin: 20px 0;
+  /* Adjust margin for spacing */
+}
+
+#searchResults,
+#imageContainer,
+#historyContainer,
+#conceptHistory {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-top: 20px;
+
+}
+
+/* Media Query for Responsiveness */
+@media screen and (max-width: 600px) {
+  div {
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#searchResults img {
+  max-width: 5%;
+  height: auto;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+#imageContainer img {
+  max-width: 10%;
+  height: auto;
+}
+
+#sides {
+  margin: 0;
+}
+
+#left {
+  float: left;
+  width: 45%;
+  overflow: hidden;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+#right {
+  float: left;
+  width: 45%;
+  overflow: hidden;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+
+}
+
+#sides:after {
+  content: "";
+  display: table;
+  clear: both;
+}
